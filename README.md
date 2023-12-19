@@ -1,3 +1,1 @@
-# subdomain: www.kanepickrel.com
-
-project site for cyber blog and porfolio
+# ismailtasdelen.github.io - ismailtasdelen.me ✔️
