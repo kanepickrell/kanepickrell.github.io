@@ -1,1 +1,1 @@
-# ismailtasdelen.github.io - ismailtasdelen.me ✔️
+# kanepickrell.github.io ✔️
