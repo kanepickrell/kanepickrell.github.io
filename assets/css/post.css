@@ -1215,3 +1215,22 @@ a:hover {
 .darken {
   animation: darkenBackground 1s forwards; /* 1 second animation */
 }
+
+/* Posts */
+#posts-section {
+  max-height: 80vh; /* Adjust the height as needed */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 20px; /* Add some padding for aesthetics */
+  margin: 20px; /* Margin for spacing */
+  background-color: #f8f8f8; /* Background color for the posts section */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+/* Style for individual posts */
+.post {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
