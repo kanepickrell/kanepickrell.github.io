@@ -270,29 +270,13 @@ a:hover {
 }
 
 /* BG */
-
 #bg {
-  -moz-animation: bg 60s linear infinite;
-  -webkit-animation: bg 60s linear infinite;
-  -ms-animation: bg 60s linear infinite;
-  animation: bg 60s linear infinite;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  /* Set your background with this */
-
-  background: #0c6992 bottom left;
-  background-repeat: repeat-x;
+  background: #115370; /* Set your desired solid background color */
   height: 100%;
   left: 0;
-  opacity: 1;
   position: fixed;
   top: 0;
+  width: 100%;
 }
 
 @-moz-keyframes bg {
@@ -411,15 +395,14 @@ a:hover {
   -webkit-animation: overlay 1.5s 1.5s forwards;
   -ms-animation: overlay 1.5s 1.5s forwards;
   animation: overlay 1.5s 1.5s forwards;
-  background-attachment: fixed;
-  background-image: none; /* Remove the image with diagonal lines */
-  background-color: #0c6992; /* Set your desired solid background color */
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: fixed, fixed;
+  /* background-image: url("images/overlay-pattern.png"), url("images/overlay.svg"); */
+  background-position: top left, center center;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
   height: 100%;
   left: 0;
-  opacity: 1;
+  opacity: 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -591,7 +574,7 @@ a:hover {
   }
 }
 
-/* #header {
+#header {
   -moz-animation: header 1s 2.25s forwards;
   -webkit-animation: header 1s 2.25s forwards;
   -ms-animation: header 1s 2.25s forwards;
@@ -612,33 +595,6 @@ a:hover {
   top: -1em;
   vertical-align: middle;
   width: 90%;
-} */
-
-#header {
-  -moz-animation: header 1s 2.25s forwards;
-  -webkit-animation: header 1s 2.25s forwards;
-  -ms-animation: header 1s 2.25s forwards;
-  animation: header 1s 2.25s forwards;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  cursor: default;
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: flex-end; /* Align children to the end (bottom) */
-  align-items: center; /* Center align horizontally */
-  position: fixed; /* Fixed positioning */
-  bottom: 0; /* Align to bottom */
-  left: 0;
-  right: 0;
-  height: 100vh; /* Full viewport height */
-  width: 100%; /* Full width */
-  opacity: 1; /* Fully visible */
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 #header h1 {
@@ -655,15 +611,7 @@ a:hover {
 }
 
 #header nav {
-  width: 100%; /* Full width to contain the list */
-  text-align: center; /* Center align the list */
-}
-
-#header nav li {
-  display: inline-block; /* Display list items inline */
-  margin: 0 10px; /* Spacing between buttons */
-  opacity: 1; /* Fully visible */
-  position: relative; /* Relative positioning */
+  margin: 1.5em 0 0 0;
 }
 
 #header nav li {
@@ -684,7 +632,7 @@ a:hover {
   line-height: 5.885em;
   opacity: 0;
   position: relative;
-  top: 0; /* Adjust as needed */
+  top: 0;
   width: 5.35em;
 }
 
@@ -762,19 +710,23 @@ a:hover {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   border: 0;
-  display: inline-block; /* Inline display for the links */
-  text-align: center; /* Center the text/icons inside the link */
+  display: inline-block;
 }
 
 #header nav a:before {
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border-radius: 100%;
   border: solid 1px #fff;
   display: block;
   font-size: 1.75em;
   height: 2.5em;
   line-height: 2.5em;
-  margin: 0 auto; /* Center the icon horizontally */
+  position: relative;
   text-align: center;
+  top: 0;
   width: 2.5em;
 }
 
@@ -1199,38 +1151,4 @@ a:hover {
   width: 100%; /* Full width */
   text-align: center; /* Center the buttons */
   transition: transform 1s ease; /* Smooth transition for the movement */
-}
-
-/* Keyframes for darkening effect */
-@keyframes darkenBackground {
-  from {
-    background-color: initial;
-  }
-  to {
-    background-color: rgba(0, 0, 0, 0.7);
-  } /* Adjust the rgba values for desired darkness */
-}
-
-/* Class for applying the darkening effect */
-.darken {
-  animation: darkenBackground 1s forwards; /* 1 second animation */
-}
-
-/* Posts */
-#posts-section {
-  max-height: 80vh; /* Adjust the height as needed */
-  overflow-y: auto; /* Enables vertical scrolling */
-  padding: 20px; /* Add some padding for aesthetics */
-  margin: 20px; /* Margin for spacing */
-  background-color: #f8f8f8; /* Background color for the posts section */
-  border-radius: 5px; /* Optional: Adds rounded corners */
-}
-
-/* Style for individual posts */
-.post {
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
 }
