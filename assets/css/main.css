@@ -1160,3 +1160,11 @@ a:hover {
     padding: 0 1em;
   }
 }
+
+.move-to-bottom {
+  position: fixed; /* Fixed position to keep it at the bottom */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  text-align: center; /* Center the buttons */
+  transition: transform 1s ease; /* Smooth transition for the movement */
+}
