@@ -84,5 +84,14 @@
         };
       };
     </script>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        const postsLink = document.getElementById("posts-link"); // Replace with your actual link's ID
+
+        postsLink.addEventListener("click", function () {
+          document.getElementById("bg").classList.add("darken"); // Assuming 'bg' is the ID of your background element
+        });
+      });
+    </script>
   </body>
 </html>

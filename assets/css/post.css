@@ -286,7 +286,7 @@ a:hover {
   transform: translate3d(0, 0, 0);
   /* Set your background with this */
 
-  background: #348cb2 url("images/bg.jpg") bottom left;
+  background: #0c6992 bottom left;
   background-repeat: repeat-x;
   height: 100%;
   left: 0;
@@ -411,14 +411,15 @@ a:hover {
   -webkit-animation: overlay 1.5s 1.5s forwards;
   -ms-animation: overlay 1.5s 1.5s forwards;
   animation: overlay 1.5s 1.5s forwards;
-  background-attachment: fixed, fixed;
-  background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
-  background-position: top left, center center;
-  background-repeat: repeat, no-repeat;
-  background-size: auto, cover;
+  background-attachment: fixed;
+  background-image: none; /* Remove the image with diagonal lines */
+  background-color: #0c6992; /* Set your desired solid background color */
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   left: 0;
-  opacity: 0;
+  opacity: 1;
   position: fixed;
   top: 0;
   width: 100%;
@@ -634,6 +635,10 @@ a:hover {
   height: 100vh; /* Full viewport height */
   width: 100%; /* Full width */
   opacity: 1; /* Fully visible */
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 #header h1 {
@@ -1194,4 +1199,19 @@ a:hover {
   width: 100%; /* Full width */
   text-align: center; /* Center the buttons */
   transition: transform 1s ease; /* Smooth transition for the movement */
+}
+
+/* Keyframes for darkening effect */
+@keyframes darkenBackground {
+  from {
+    background-color: initial;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.7);
+  } /* Adjust the rgba values for desired darkness */
+}
+
+/* Class for applying the darkening effect */
+.darken {
+  animation: darkenBackground 1s forwards; /* 1 second animation */
 }
