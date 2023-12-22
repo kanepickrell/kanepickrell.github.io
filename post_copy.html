@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta
+      name="keywords"
+      content="engineer, cyber automation, machine learning, malware analysis, software development, capabilitiy development"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="author" content="Kane Pickrel" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/post.css" />
+    <link rel="shortcut icon" href="assets/css/images/icon.ico" />
+  </head>
+
+  <body class="Loading">
+    <div id="wrapper">
+      <div id="bg"></div>
+      <div id="overlay"></div>
+      <div id="main">
+        <!-- Header -->
+        <header id="header">
+          <h1>Kane Pickrel</h1>
+          <p>Software Engineer &nbsp;&bull;&nbsp; Cyber Automation</p>
+          <div id="posts-section">
+            <div class="post"><p>This is a post</p></div>
+            <div class="post">Post 3 content goes here...</div>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a
+                  href="index.html"
+                  id="posts-link"
+                  class="icon fa-home"
+                  target="_self"
+                  ><span class="label">Posts</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/kane-pickrel-9288a691/"
+                  class="icon fa-linkedin"
+                  target="_blank"
+                  ><span class="label">Linkedin</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/kanepickrell"
+                  class="icon fa-github"
+                  target="_blank"
+                  ><span class="label">Github</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:kanepickrell@gmail.com"
+                  class="icon fa-envelope-o"
+                  target="_blank"
+                  ><span class="label">Email</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Footer -->
+      </div>
+    </div>
+    <!--[if lte IE 8
+      ]><script src="assets/js/ie/respond.min.js"></script
+    ><![endif]-->
+    <script>
+      window.onload = function () {
+        // Existing code
+        document.body.className = "";
+
+        // New code to move buttons for the posts page
+        if (window.location.href.includes("posts.html")) {
+          var buttons = document.querySelectorAll("#header nav a");
+          buttons.forEach(function (button) {
+            button.classList.add("move-to-bottom");
+          });
+        }
+
+        // More of your existing code
+        window.ontouchmove = function () {
+          return false;
+        };
+        window.onorientationchange = function () {
+          document.body.scrollTop = 0;
+        };
+      };
+    </script>
+  </body>
+</html>
