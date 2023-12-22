@@ -32,22 +32,38 @@ body {
 }
 
 #navbar a {
-  color: white;
-  text-decoration: none;
   display: inline-block;
   width: 75px; /* Circle size */
   height: 75px; /* Circle size */
-  line-height: 75px; /* Center the icon vertically */
+  line-height: 75px; /* Center the icon/text vertically */
   border-radius: 50%; /* Make it circular */
-  background-color: #0a3b50; /* Initial background color */
+  background-color: #0a3b50; /* Background color of the circle */
+  color: white; /* Text/icon color */
   text-align: center;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-  /* font-size: 24px; */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+  text-decoration: none; /* Optional: Removes underline from links */
+}
+
+#navbar a:before {
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-radius: 100%;
+  border: solid 1px #fff;
+  display: block;
+  font-size: 1.75em;
+  height: 2.5em;
+  line-height: 2.5em;
+  position: relative;
+  text-align: center;
+  top: 0;
+  width: 2.5em;
 }
 
 #navbar a:hover {
-  background-color: rgba(36, 70, 221, 0.911); /* Hover background color */
-  color: #ffffff34; /* Hover text color */
+  background-color: rgba(36, 70, 221, 0.911);
+  color: white; /* New text/icon color on hover */
 }
 
 #navbar .icon:before {
@@ -56,8 +72,8 @@ body {
 
 /* Post Section */
 #post-section {
-  margin-top: 2em;
-  padding: 1em;
+  margin-top: 0.5em;
+  padding: 0em;
   background-color: #0a3b50; /* Background color for the post section */
   color: #ffffff; /* Text color */
   font-family: "Source Sans Pro", sans-serif;
@@ -67,8 +83,7 @@ body {
   max-width: 800px;
   margin: auto;
   background-color: #0a3b50;
-  padding: 1em;
-  border-radius: 5px; /* Optional: for rounded corners */
+  padding: 0.5em;
 }
 
 #post-section h2 {
