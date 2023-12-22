@@ -35,18 +35,23 @@ body {
   color: white;
   text-decoration: none;
   display: inline-block;
-  width: 50px; /* Circle size */
-  height: 50px; /* Circle size */
-  line-height: 50px; /* Center the icon vertically */
+  width: 75px; /* Circle size */
+  height: 75px; /* Circle size */
+  line-height: 75px; /* Center the icon vertically */
   border-radius: 50%; /* Make it circular */
   background-color: #0a3b50; /* Initial background color */
   text-align: center;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  /* font-size: 24px; */
 }
 
 #navbar a:hover {
   background-color: rgba(36, 70, 221, 0.911); /* Hover background color */
   color: #ffffff34; /* Hover text color */
+}
+
+#navbar .icon:before {
+  font-size: 30px; /* Adjust this value to change the size of the icons */
 }
 
 /* Post Section */
