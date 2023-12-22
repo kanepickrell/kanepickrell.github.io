@@ -17,6 +17,7 @@ body {
   background-color: #115370;
   padding: 1em 0;
   text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 #navbar ul {
@@ -26,21 +27,35 @@ body {
 }
 
 #navbar li {
-  display: inline;
+  display: inline-block;
   margin: 0 10px;
 }
 
 #navbar a {
   color: white;
   text-decoration: none;
+  display: inline-block;
+  width: 50px; /* Circle size */
+  height: 50px; /* Circle size */
+  line-height: 50px; /* Center the icon vertically */
+  border-radius: 50%; /* Make it circular */
+  background-color: #348cb2; /* Initial background color */
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+#navbar a:hover {
+  background-color: rgba(36, 70, 221, 0.911); /* Hover background color */
+  color: #ffffff34; /* Hover text color */
 }
 
 /* Post Section */
 #post-section {
   margin-top: 2em;
   padding: 1em;
-  background-color: #115370;
-  color: #ffffff;
+  background-color: #115370; /* Background color for the post section */
+  color: #ffffff; /* Text color */
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 #post-section article {
@@ -48,7 +63,7 @@ body {
   margin: auto;
   background-color: #115370;
   padding: 1em;
-  border-radius: 5px;
+  border-radius: 5px; /* Optional: for rounded corners */
 }
 
 #post-section h2 {
