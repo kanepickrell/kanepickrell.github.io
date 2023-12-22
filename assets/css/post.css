@@ -26,8 +26,10 @@ code {
   background-color: #000000;
 }
 
-#wrapper {
-  background-color: #0a3b50; /* Ensure wrapper has the same background color */
+#body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a3b50; /* Set body background color */
 }
 
 /* Navigation Bar */
@@ -50,10 +52,10 @@ code {
 }
 
 #navbar li {
-  animation: nav-icons 0.5s ease-in-out forwards;
-  -moz-animation: nav-icons 0.5s ease-in-out forwards;
-  -webkit-animation: nav-icons 0.5s ease-in-out forwards;
-  -ms-animation: nav-icons 0.5s ease-in-out forwards;
+  animation: nav-icons 0.25s ease-in-out forwards;
+  -moz-animation: nav-icons 0.25s ease-in-out forwards;
+  -webkit-animation: nav-icons 0.25s ease-in-out forwards;
+  -ms-animation: nav-icons 0.25s ease-in-out forwards;
   animation-delay: 0.25s;
   -moz-animation-delay: 0.25s;
   -webkit-animation-delay: 0.25s;
@@ -131,23 +133,23 @@ code {
   font-size: 30px; /* Adjust this value to change the size of the icons */
 }
 
-#navbar li:nth-child(1),
-#navbar li:nth-child(2),
-#navbar li:nth-child(3),
-#navbar li:nth-child(4),
-#navbar li:nth-child(5),
-#navbar li:nth-child(6),
-#navbar li:nth-child(7),
-#navbar li:nth-child(8),
-#navbar li:nth-child(9),
-#navbar li:nth-child(10) {
-  -moz-animation-delay: 1s;
-  -webkit-animation-delay: 1s;
-  -ms-animation-delay: 1s;
-  animation-delay: 1s;
+#navbar li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+#navbar li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#navbar li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+#navbar li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+#navbar li:nth-child(5) {
+  animation-delay: 0.5s;
 }
 
-@-moz-keyframes wrapper {
+@-moz-keyframes body {
   0% {
     -moz-transform: translate3d(0, 1em, 0);
     -webkit-transform: translate3d(0, 1em, 0);
@@ -165,7 +167,7 @@ code {
   }
 }
 
-@-webkit-keyframes wrapper {
+@-webkit-keyframes body {
   0% {
     -moz-transform: translate3d(0, 1em, 0);
     -webkit-transform: translate3d(0, 1em, 0);
@@ -183,7 +185,7 @@ code {
   }
 }
 
-@-ms-keyframes wrapper {
+@-ms-keyframes body {
   0% {
     -moz-transform: translate3d(0, 1em, 0);
     -webkit-transform: translate3d(0, 1em, 0);
@@ -201,7 +203,7 @@ code {
   }
 }
 
-@keyframes wrapper {
+@keyframes body {
   0% {
     -moz-transform: translate3d(0, 1em, 0);
     -webkit-transform: translate3d(0, 1em, 0);
@@ -263,11 +265,11 @@ code {
   }
 }
 
-#wrapper {
-  -moz-animation: wrapper 1s 0.25s forwards; /* Reduced delay to 0.25s */
-  -webkit-animation: wrapper 1s 0.25s forwards;
-  -ms-animation: wrapper 1s 0.25s forwards;
-  animation: wrapper 1s 0.25s forwards;
+#body {
+  -moz-animation: body 1s 2.25s forwards;
+  -webkit-animation: body 1s 2.25s forwards;
+  -ms-animation: body 1s 2.25s forwards;
+  animation: body 1s 2.25s forwards;
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -328,4 +330,26 @@ code {
 
 .icon > .label {
   display: none;
+}
+
+#myButton {
+  position: absolute; /* Position the element absolutely */
+  top: 20px; /* Distance from the top of the container */
+  left: 20px; /* Distance from the left of the container */
+  width: 50px; /* Match the width of navbar icons */
+  height: 50px; /* Match the height of navbar icons */
+  line-height: 50px; /* Center the text/icon vertically */
+  border-radius: 50%; /* Circular shape, like navbar icons */
+  background-color: #0a3b50; /* Same background color as navbar icons */
+  color: white; /* Text/icon color */
+  text-align: center; /* Center the text/icon horizontally */
+  font-size: 1.75em; /* Font size similar to navbar icons */
+  border: solid 1px #fff; /* Border style similar to navbar icons */
+  cursor: pointer; /* Cursor changes to a hand icon when hovered */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+#myButton:hover {
+  background-color: rgba(36, 70, 221, 0.911);
+  color: white; /* New text/icon color on hover */
 }
