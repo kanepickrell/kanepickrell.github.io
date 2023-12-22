@@ -5,16 +5,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #115370; /* Set body background color */
+  background-color: #0a3b50; /* Set body background color */
 }
 
 #wrapper {
-  background-color: #115370; /* Ensure wrapper has the same background color */
+  background-color: #0a3b50; /* Ensure wrapper has the same background color */
 }
 
 /* Navigation Bar */
 #navbar {
-  background-color: #115370;
+  background-color: #0a3b50;
   padding: 1em 0;
   text-align: center;
   font-family: "Source Sans Pro", sans-serif;
@@ -39,7 +39,7 @@ body {
   height: 50px; /* Circle size */
   line-height: 50px; /* Center the icon vertically */
   border-radius: 50%; /* Make it circular */
-  background-color: #348cb2; /* Initial background color */
+  background-color: #0a3b50; /* Initial background color */
   text-align: center;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
@@ -53,7 +53,7 @@ body {
 #post-section {
   margin-top: 2em;
   padding: 1em;
-  background-color: #115370; /* Background color for the post section */
+  background-color: #0a3b50; /* Background color for the post section */
   color: #ffffff; /* Text color */
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -61,7 +61,7 @@ body {
 #post-section article {
   max-width: 800px;
   margin: auto;
-  background-color: #115370;
+  background-color: #0a3b50;
   padding: 1em;
   border-radius: 5px; /* Optional: for rounded corners */
 }
