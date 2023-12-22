@@ -62,83 +62,30 @@
           <!-- Your post content goes here -->
           <h2>Posts</h2>
           <p>=======</p>
-          <h3>Red Teaming 101: Learning Covenant C2 Framework</h3>
+          <a href="post1.html"
+            ><h3>Learning Covenant C2 - Setup Guide & Lessons learned</h3></a
+          >
+
           <p>
-            Command and Control is part of Red Teaming tactic according to Mitre
-            ATT&CK framework. C2 is very helpful for maintaining persistent
-            access between attacker and compromised machine and easy to
-            exfiltrate data. There are lot of C2 framework available to use from
-            open-source version to paid-version like Empire, SharpC2,
-            SilentTrinity, Metasploit, Covenant, Cobalt Strike(Paid), Merlin,
-            PoshC2, and many more. In this guide, I will talk about basic
-            Covenant C2 for Red Teaming. Covenant is a .NET command and control
-            framework that aims to highlight the attack surface of .NET, make
-            the use of offensive .NET tradecraft easier, and serve as a
-            collaborative command and control platform for red teamers. Covenant
-            is an ASP.NET Core, cross-platform application that includes a
-            web-based interface that allows for multi-user collaboration.
-            https://github.com/cobbr/Covenant Architecture Covenant has a
-            client-server architecture that allows for multi-user collaboration.
-            There are three main components of Covenant’s architecture: Covenant
-            — Covenant is the server-side component of the client-server
-            architecture. Covenant runs the command and control server hosted on
-            infrastructure shared between operators. I will also frequently use
-            the term “Covenant” to refer to the entire overarching project that
-            includes all components of the architecture. Elite — Elite is the
-            client-side component of the client-server architecture. Elite is a
-            command-line interface that operators use to interact with the
-            Covenant server to conduct operations. Grunt — A “Grunt” is the name
-            of Covenant’s implant that is deployed to targets. All three
-            components of Covenant are written in C#. Covenant and Elite both
-            target .NET Core and have docker support, while Grunt implants
-            target the .NET framework. Features Covenant has several key
-            features that make it useful and differentiate it from other command
-            and control frameworks: Intuitive Interface — Covenant provides an
-            intuitive web application to easily run a collaborative red team
-            operation. Multi-Platform — Covenant targets .NET Core, which is
-            multi-platform. This allows Covenant to run natively on Linux,
-            MacOS, and Windows platforms. Additionally, Covenant has docker
-            support, allowing it to run within a container on any system that
-            has docker installed. Multi-User — Covenant supports multi-user
-            collaboration. The ability to collaborate has become crucial for
-            effective red team operations. Many users can interact with the same
-            Covenant server and operate independently or collaboratively. API
-            Driven — Covenant is driven by an API that enables multi-user
-            collaboration and is easily extendible. Additionally, Covenant
-            includes a Swagger UI that makes development and debugging easier
-            and more convenient. Listener Profiles — Covenant supports listener
-            “profiles” that control how the network communication between Grunt
-            implants and Covenant listeners look on the wire. Encrypted Key
-            Exchange — Covenant implements an encrypted key exchange between
-            Grunt implants and Covenant listeners that is largely based on a
-            similar exchange in the Empire project, in addition to optional SSL
-            encryption. This achieves the cryptographic property of forward
-            secrecy between Grunt implants. Dynamic Compilation — Covenant uses
-            the Roslyn API for dynamic C# compilation. Every time a new Grunt is
-            generated or a new task is assigned, the relevant code is recompiled
-            and obfuscated with ConfuserEx, avoiding totally static payloads.
-            Covenant reuses much of the compilation code from the SharpGen
-            project, which I described in much more detail in a previous post.
-            Inline C# Execution — Covenant borrows code and ideas from both the
-            SharpGen and SharpShell projects to allow operators to execute C#
-            one-liners on Grunt implants. This allows for similar functionality
-            to that described in the SharpShell post, but allows the one-liners
-            to be executed on remote implants. Tracking Indicators — Covenant
-            tracks “indicators” throughout an operation, and summarizes them in
-            the Indicators menu. This allows an operator to conduct actions that
-            are tracked throughout an operation and easily summarize those
-            actions to the blue team during or at the end of an assessment for
-            deconfliction and educational purposes. This feature is still in
-            it’s infancy and still has room for improvement. Developed in C# —
-            Personally, I enjoy developing in C#, which may not be a surprise
-            for anyone that has read my latest blogs or tools. Not everyone
-            might agree that development in C# is ideal, but hopefully everyone
-            agrees that it is nice to have all components of the framework
-            written in the same language. I’ve found it very convenient to write
-            the server, client, and implant all in the same language. This may
-            not be a true “feature”, but hopefully it allows others to
-            contribute to the project fairly easily.
+            > This post is how to spin up Covenant C2 and set up your first
+            listenter in under an hour.<br />
+            > Ill provide notes on how to do this offline as well to help you
+            install the dependencies without internet access.<br />
+            > As I am still pretty novice to red teaming, I think my perspective
+            be helpful to others who are just starting out as well.<br /><br />
           </p>
+
+          <!-- <a href="post2.html"
+            ><h3>Red Teaming 101: Learning Covenant C2 Framework</h3></a
+          >
+          <p>
+          </p> -->
+
+          <!-- <a href="post3.html"
+            ><h3>Red Teaming 102: Learning Covenant C2 Framework</h3></a
+          >
+          <p>
+          </p> -->
         </article>
       </section>
     </div>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post1</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="author" content="Kane Pickrel" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/post.css" />
+    <link rel="shortcut icon" href="assets/css/images/icon.ico" />
+    <!-- Add FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Navigation Bar -->
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              id="home-link"
+              class="icon fa-home"
+              target="_self"
+              ><span class="label">Home</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/kane-pickrel-9288a691/"
+              class="icon fa-linkedin"
+              target="_blank"
+              ><span class="label">Linkedin</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/kanepickrell"
+              class="icon fa-github"
+              target="_blank"
+              ><span class="label">Github</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:kanepickrell@gmail.com"
+              class="icon fa-envelope-o"
+              target="_blank"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Post Section -->
+      <section id="post-section">
+        <article>
+          
+          <p>=======</p>
+
+          <h3>Learning Covenant C2 - Setup Guide & Lessons learned</h3>
+          <p>
+            > This post is how to spin up Covenant C2 and set up your first listenter in under an hour.<br>
+            > Ill provide notes on how to do this offline as well to help you install the dependencies without internet access.<br>
+            > As I am still pretty novice to red teaming, I think my perspective be helpful to others who are just starting out as well.<br><br>
+
+            Covenant C2 is a command and control (C2) post-exploitation framework. As of mid-September 2019, Covenant is considered one of the latest and advanced frameworks in this area. Here's a basic summary of the steps involved, along with additional insights about Covenant C2 that might be helpful:
+            <br><br>
+            <strong>Installing Covenant:</strong><br>
+            <em>Prerequisites:</em> Compatible with Windows 10 workstations, recent Windows Server OS, or Linux distributions supporting .NET Core. Required applications: GIT and .NET Core 2.2 SDK.<br>
+            <em>Installation Process:</em> Covenant uses a modern, cross-platform architecture and does not come with a traditional installer. Installation involves cloning the project git repository and building and running the application.<br>
+            <pre><code>
+            > git clone --recurse-submodules https://github.com/cobbr/Covenant
+            > cd Covenant/Covenant
+            > dotnet build
+            > dotnet run
+            </code></pre>
+            <br>
+            <strong>Additional Information about Covenant C2:</strong><br>
+            Covenant is known for its robust and flexible architecture, making it a preferred choice for post-exploitation scenarios. It provides a web-based interface, allowing for easy management and deployment of grunts. Grunts are the agents controlled by the Covenant framework, designed to execute tasks and payloads on compromised hosts, reporting back to the Covenant server. Covenant supports a scalable approach, suitable for managing a large number of compromised hosts. Its modular design allows for the addition of new features and capabilities. One key aspect of using C2 frameworks like Covenant is maintaining stealth and avoiding detection. Covenant includes features to evade common security defenses and blend into normal network traffic. As an open-source project, Covenant is regularly updated by the community. It's important to keep up with the latest versions and community contributions for enhanced features and security patches. Typically used in penetration testing and red teaming exercises, Covenant can simulate advanced persistent threat (APT) activities to test an organization's defenses. In using Covenant, it's crucial to adhere to legal and ethical guidelines, using it only in authorized environments for security testing and research purposes.
+          </p>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

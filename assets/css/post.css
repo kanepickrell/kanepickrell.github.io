@@ -8,6 +8,24 @@ body {
   background-color: #0a3b50; /* Set body background color */
 }
 
+a {
+  color: #2c8a39;
+}
+
+pre {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 25px;
+  color: #08ba23;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  font-size: 1em;
+  background-color: #000000;
+}
+
 #wrapper {
   background-color: #0a3b50; /* Ensure wrapper has the same background color */
 }
