@@ -75,24 +75,48 @@
           <p style="color: gray; font-size: larger; margin-top: -10px;">45 minute read - Published: 22 Dec, 2023</p>
 
           <p>
-            > This post is how to spin up Covenant C2 and set up your first listenter in under an hour.<br>
-            > Ill provide notes on how to do this offline as well to help you install the dependencies without internet access.<br>
+            > In this guide, I'll show you how to set up Covenant C2 and establish your first listener in under an hour.<br>
+            > My lack of experience in .NET and installing dependencies offline turned out to be more time-consuming than necessary. So I aim to spare you this hassle and provide a straightforward, easy-to-follow tutorial to streamline your setup process.<br>
+            > As my focus will be to show you what to look out for when installing offline, I'll also walk through setting up on a Kali machine with internet access.<br>
             > As I am still pretty novice to red teaming, I think my perspective be helpful to others who are just starting out as well.<br><br>
 
             Covenant C2 is a command and control (C2) post-exploitation framework. As of mid-September 2019, Covenant is considered one of the latest and advanced frameworks in this area. Here's a basic summary of the steps involved, along with additional insights about Covenant C2 that might be helpful:
             <br><br>
-            <strong>Installing Covenant:</strong><br>
             <em>Prerequisites:</em> Compatible with Windows 10 workstations, recent Windows Server OS, or Linux distributions supporting .NET Core. Required applications: GIT and .NET Core 2.2 SDK.<br>
-            <em>Installation Process:</em> Covenant uses a modern, cross-platform architecture and does not come with a traditional installer. Installation involves cloning the project git repository and building and running the application.<br>
-            <pre><code>
-            > git clone --recurse-submodules https://github.com/cobbr/Covenant
-            > cd Covenant/Covenant
-            > dotnet build
-            > dotnet run
-            </code></pre>
             <br>
+            <em>Installation Process:</em> Covenant uses a modern, cross-platform architecture and does not come with a traditional installer. Installation involves cloning the project git repository and building and running the application.<br>
+            <br></br>
+            <strong>Online Installation</strong><br>
+            > Below are the steps illustrated in <a href="https://github.com/cobbr/Covenant/wiki/Installation-And-Startup" style="font-weight: bold;" target="_blank">Covenant C2's official documentation.</a>
+            
+            > Starting from your Kali machine, you can clone and cd into your new Covenant package.<br>
+            <pre><code>
+              > git clone --recurse-submodules https://github.com/cobbr/Covenant
+              > cd Covenant/Covenant
+              </code></pre>
+              > Before you build your Covenant C2 project, you'll need open root and update the dotnet system global variant. If you don't you'll recieve "Couldn't find a valid ICU package installed on the system". This typically occurs in Dotnet Core projects or packaged Dotnet Core binaries running on Ubuntu due to a missing dependency for Unicode and Globalization support.
+              <pre><code>
+                > sudo su
+                > vim ~/.zshrc
+              </code></pre>
+
+              <img src="assets\css\images\dotnet_rule.jpeg">
+              
+
+              <pre><code>
+                > dotnet build
+                > dotnet run
+              </code></pre>
+
+
+            <strong>Offline Installation</strong><br>
+            
+            
             <strong>Additional Information about Covenant C2:</strong><br>
-            Covenant is known for its robust and flexible architecture, making it a preferred choice for post-exploitation scenarios. It provides a web-based interface, allowing for easy management and deployment of grunts. Grunts are the agents controlled by the Covenant framework, designed to execute tasks and payloads on compromised hosts, reporting back to the Covenant server. Covenant supports a scalable approach, suitable for managing a large number of compromised hosts. Its modular design allows for the addition of new features and capabilities. One key aspect of using C2 frameworks like Covenant is maintaining stealth and avoiding detection. Covenant includes features to evade common security defenses and blend into normal network traffic. As an open-source project, Covenant is regularly updated by the community. It's important to keep up with the latest versions and community contributions for enhanced features and security patches. Typically used in penetration testing and red teaming exercises, Covenant can simulate advanced persistent threat (APT) activities to test an organization's defenses. In using Covenant, it's crucial to adhere to legal and ethical guidelines, using it only in authorized environments for security testing and research purposes.
+            > Covenant is known for its robust and flexible architecture, making it a preferred choice for post-exploitation scenarios. It provides a web-based interface, allowing for easy management and deployment of grunts. Grunts are the agents controlled by the Covenant framework, designed to execute tasks and payloads on compromised hosts, reporting back to the Covenant server. Covenant supports a scalable approach, suitable for managing a large number of compromised hosts. Its modular design allows for the addition of new features and capabilities. One key aspect of using C2 frameworks like Covenant is maintaining stealth and avoiding detection. Covenant includes features to evade common security defenses and blend into normal network traffic. As an open-source project, Covenant is regularly updated by the community. It's important to keep up with the latest versions and community contributions for enhanced features and security patches. Typically used in penetration testing and red teaming exercises, Covenant can simulate advanced persistent threat (APT) activities to test an organization's defenses. In using Covenant, it's crucial to adhere to legal and ethical guidelines, using it only in authorized environments for security testing and research purposes.<br><br>
+          
+            <strong>Covenant Dashboard Basics</strong><br><br>
+            <strong>Setting Up Your First Listener</strong><br>
           </p>
         </article>
       </section>
