@@ -70,7 +70,6 @@
         <article>
           
           <p>=======</p>
-
           <h3>Learning Covenant C2 - Setup Guide & Lessons learned</h3> 
           <p style="color: gray; font-size: larger; margin-top: -10px;">45 minute read - Published: 22 Dec, 2023</p>
 
@@ -87,38 +86,57 @@
             <br>
             <em>Installation Process:</em> Covenant uses a modern, cross-platform architecture and does not come with a traditional installer. Installation involves cloning the project git repository and building and running the application.<br>
             <br></br>
-            <strong>Online Installation</strong><br>
-            > Below are the steps illustrated in <a href="https://github.com/cobbr/Covenant/wiki/Installation-And-Startup" style="font-weight: bold;" target="_blank">Covenant C2's official documentation.</a>
+            <strong>Section 1.a: Online Installation</strong><br>
+            > Below are the steps illustrated in <a href="https://github.com/cobbr/Covenant/wiki/Installation-And-Startup" style="font-weight: bold;" target="_blank">Covenant C2's official documentation.</a><br>
             
             > Starting from your Kali machine, you can clone and cd into your new Covenant package.<br>
             <pre><code>
               > git clone --recurse-submodules https://github.com/cobbr/Covenant
               > cd Covenant/Covenant
               </code></pre>
-              > Before you build your Covenant C2 project, you'll need open root and update the dotnet system global variant. If you don't you'll recieve "Couldn't find a valid ICU package installed on the system". This typically occurs in Dotnet Core projects or packaged Dotnet Core binaries running on Ubuntu due to a missing dependency for Unicode and Globalization support.
+              > Before you build your Covenant C2 project, you'll need open root and update the dotnet system global variant.<br>
+              > If you don't you'll recieve "Couldn't find a valid ICU package installed on the system". This typically occurs in Dotnet Core projects or packaged Dotnet Core binaries running on Ubuntu due to a missing dependency for Unicode and Globalization support.
               <pre><code>
                 > sudo su
                 > vim ~/.zshrc
               </code></pre>
 
-              <img src="assets\css\images\dotnet_rule.jpeg">
-              
+              <img src="assets\css\images\dotnet_rule.jpeg"><br>
 
               <pre><code>
                 > dotnet build
                 > dotnet run
               </code></pre>
+            > You should now see that your Covenant dashboard has been activated and at https://{local_ip}:7443.<br><br>
 
-
-            <strong>Offline Installation</strong><br>
-        
-            <strong>Covenant Dashboard Basics</strong><br><br>
-            > So once you verify that Covenant is running, let's talk about the dashboard. <br>
-            > Covenant's dashboard is web-based interface, allowing for easy management and deployment of grunts. Grunts are the agents controlled by the Covenant framework, designed to execute tasks and payloads on compromised hosts, reporting back to the Covenant server.<br>
-            > Covenant supports a scalable approach, suitable for managing a large number of compromised hosts. Its modular design allows for the addition of new features and capabilities. <br>
-            > One key aspect of using C2 frameworks like Covenant is maintaining stealth and avoiding detection. Covenant includes features to evade common security defenses and blend into normal network traffic. <br>
-            > As an open-source project, Covenant is regularly updated by the community. Keep in mind, if you are new to using C2 architectures, it's crucial to adhere to legal and ethical guidelines, using it only in authorized environments for security testing and research purposes.<br><br>
             
+            > This concludes the online installation and you are ready to start your first listener in Section 2!<br><br>
+
+
+            <strong>Section 1.b: Offline Kali Installation</strong><br>
+            > On an online Windows/Mac/Linux machine, run the following commands and save to a zipped folder<br><br>
+            > Once you copy you zipped file over to your Kali machine, extract and CD into your Covenant folder. <br>
+            > If you try to 'dotnet build' your project you'll encounter this error. <br><br>
+            <img src="assets\css\images\nuget_err.jpeg"><br><br>
+
+            > This is where I had trouble with dependencies. .NET is trying to reach out to the Nuget API to download its required dependencies.<br>
+            > The dependencies you will need can be found here. <br>
+            > Once you download these to your online Windows/Mac/Linux, copy them over to Linux and upload them here. <br>
+
+            <pre><code>
+              > dotnet build
+              > dotnet run
+            </code></pre>
+
+            > ...This concludes the offline installation and you are ready to start your first listener in Section 2!<br><br>
+        
+            <strong>Section 2:Covenant Dashboard Basics</strong><br>
+            > So once you verify that Covenant is running, let's talk about the dashboard.<br>
+            > The dashboard is divided into three main sections: Grunts, Listeners, and Tasks.<br>
+            > Grunts are the agents controlled by the Covenant framework, designed to execute tasks and payloads on compromised hosts, reporting back to the Covenant server. <br>
+            > Listeners are the endpoints that Grunts connect to. Listeners are responsible for receiving Grunt connections, authenticating them, and relaying commands and responses between the Grunt and the Covenant server. <br>
+            > Tasks are the actions that Grunts can perform. Tasks are executed on Grunts and can be used to perform actions on the host, such as executing a shell command, uploading a file, or executing a Covenant script. <br>
+
             <strong>Setting Up Your First Listener</strong><br>
           </p>
         </article>
