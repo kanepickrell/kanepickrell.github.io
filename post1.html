@@ -74,18 +74,17 @@
           <p style="color: gray; font-size: larger; margin-top: -10px;">45 minute read - Published: 22 Dec, 2023</p>
 
           <p>
+          <strong>Introduction</strong><br>
             > In this guide, I'll show you how to set up Covenant C2 and establish your first listener in under an hour.<br>
-            > My lack of experience in .NET and installing dependencies offline turned out to be more time-consuming than necessary. So I aim to spare you this hassle and provide a straightforward, easy-to-follow tutorial to streamline your setup process.<br>
+            > My lack of experience in .NET and installing dependencies offline turned out to be more time-consuming than necessary. That being said, my mission is to spare you this hassle and provide a straightforward, easy-to-follow tutorial to streamline your setup process.<br>
             > As my focus will be to show you what to look out for when installing offline, I'll also walk through setting up on a Kali machine with internet access.<br>
-            > As I am still pretty novice to red teaming, I think my perspective be helpful to others who are just starting out as well.<br><br>
-
-            > Covenant C2 is a command and control (C2) post-exploitation framework. As of mid-September 2019, Covenant is considered one of the latest and advanced frameworks in this area.
+            > I'll admit I am novice in red teaming, so this is intended for those who are also absolute beginners who have never used a command and control (C2) before. <br><br>
             
-            <br><br>
-            <em>Prerequisites:</em> Compatible with Windows 10 workstations, recent Windows Server OS, or Linux distributions supporting .NET Core. Required applications: GIT and .NET Core 2.2 SDK.<br>
+            <strong>Section 0: Technology Overview</strong><br>
+            > Covenant C2 is a command and control (C2) post-exploitation framework. As of mid-September 2019, Covenant is considered one of the latest and advanced frameworks in this area.<br>
+            <em>> Prerequisites:</em> Compatible with Windows 10 workstations, recent Windows Server OS, or Linux distributions supporting .NET Core. Required applications: GIT and .NET Core 2.2 SDK.<br>
+            <em>> Installation Process:</em> Covenant uses a modern, cross-platform architecture and does not come with a traditional installer. Installation involves cloning the project git repository and building and running the application.<br>
             <br>
-            <em>Installation Process:</em> Covenant uses a modern, cross-platform architecture and does not come with a traditional installer. Installation involves cloning the project git repository and building and running the application.<br>
-            <br></br>
             <strong>Section 1.a: Online Installation</strong><br>
             > Below are the steps illustrated in <a href="https://github.com/cobbr/Covenant/wiki/Installation-And-Startup" style="font-weight: bold;" target="_blank">Covenant C2's official documentation.</a><br>
             
@@ -94,8 +93,9 @@
               > git clone --recurse-submodules https://github.com/cobbr/Covenant
               > cd Covenant/Covenant
               </code></pre>
-              > Before you build your Covenant C2 project, you'll need open root and update the dotnet system global variant.<br>
-              > If you don't you'll recieve "Couldn't find a valid ICU package installed on the system". This typically occurs in Dotnet Core projects or packaged Dotnet Core binaries running on Ubuntu due to a missing dependency for Unicode and Globalization support.
+              > Before you build the Covenant project, you'll run as root user and update the dotnet system global variant.<br>
+              > If you don't add this rule to the zsh script, you'll recieve a "Couldn't find a valid ICU package installed on the system". <br>
+              > This typically occurs in Dotnet Core projects or packaged Dotnet Core binaries running on Ubuntu due to a missing dependency for Unicode and Globalization support.
               <pre><code>
                 > sudo su
                 > vim ~/.zshrc
@@ -107,21 +107,21 @@
                 > dotnet build
                 > dotnet run
               </code></pre>
-            > You should now see that your Covenant dashboard has been activated and at https://{local_ip}:7443.<br><br>
-
-            
-            > This concludes the online installation and you are ready to start your first listener in Section 2!<br><br>
-
+            > You should now see that your Covenant dashboard has been activated and at https://{local_ip}:7443.<br>            
+            > This concludes the online installation and you are ready to explore the dashboard in Section 2!<br><br>
 
             <strong>Section 1.b: Offline Kali Installation</strong><br>
-            > On an online Windows/Mac/Linux machine, run the following commands and save to a zipped folder<br><br>
+            > On an online Windows/Mac/Linux machine, run the following commands and save to a zipped folder<br>
             > Once you copy you zipped file over to your Kali machine, extract and CD into your Covenant folder. <br>
             > If you try to 'dotnet build' your project you'll encounter this error. <br><br>
             <img src="assets\css\images\nuget_err.jpeg"><br><br>
 
-            > This is where I had trouble with dependencies. .NET is trying to reach out to the Nuget API to download its required dependencies.<br>
-            > The dependencies you will need can be found here. <br>
+            > This is where I had trouble with dependencies. .NET is trying to reach out to the internet and download its required Nuget dependencies.<br>
+            > The dependencies you will need can be downloaded here. <br>
             > Once you download these to your online Windows/Mac/Linux, copy them over to Linux and upload them here. <br>
+            > In covenant, you'll now make two configurations to the nuget.config file.
+            > Config 1 with picture
+            > Config 2 with picture
 
             <pre><code>
               > dotnet build
