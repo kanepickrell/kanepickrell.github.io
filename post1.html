@@ -72,20 +72,19 @@
           <p>=======</p>
           <h3>Learning Covenant C2 - Setup Guide & Lessons learned</h3> 
           <p style="color: gray; font-size: larger; margin-top: -10px;">45 minute read - Published: 22 Dec, 2023</p>
-
           <p>
-          <strong>Introduction</strong><br>
+          <strong>Section 0: Introduction</strong><br>
             > In this guide, I'll show you how to set up Covenant C2 and establish your first listener in under an hour.<br>
-            > My lack of experience in .NET and installing dependencies offline turned out to be more time-consuming than necessary. That being said, my mission is to spare you this hassle and provide a straightforward, easy-to-follow tutorial to streamline your setup process.<br>
+            > Why am I writing this? My initial experience with configuring .NET and installing dependencies offline turned out to be more time-consuming than necessary. That being said, my mission is to spare you this hassle and provide a no-nonsense, straightforward tutorial to streamline your setup process.<br>
             > As my focus will be to show you what to look out for when installing offline, I'll also walk through setting up on a Kali machine with internet access.<br>
-            > I'll admit I am novice in red teaming, so this is intended for those who are also absolute beginners who have never used a command and control (C2) before. <br><br>
+            > As a final note, I'll admit I am still new to red teaming, so I've designed this guide is for those who are also absolute beginners and new command and control (C2) tools. <br><br>
             
-            <strong>Section 0: Technology Overview</strong><br>
-            > Covenant C2 is a command and control (C2) post-exploitation framework. As of mid-September 2019, Covenant is considered one of the latest and advanced frameworks in this area.<br>
+            <strong>Section 1: Technology Overview</strong><br>
+            <em>> Description:</em> Covenant C2 is a command and control (C2) post-exploitation framework. As of mid-September 2019, Covenant is considered one of the latest and advanced frameworks in this area.<br>
             <em>> Prerequisites:</em> Compatible with Windows 10 workstations, recent Windows Server OS, or Linux distributions supporting .NET Core. Required applications: GIT and .NET Core 2.2 SDK.<br>
             <em>> Installation Process:</em> Covenant uses a modern, cross-platform architecture and does not come with a traditional installer. Installation involves cloning the project git repository and building and running the application.<br>
             <br>
-            <strong>Section 1.a: Online Installation</strong><br>
+            <strong>Section 2.a: Online Installation</strong><br>
             > Below are the steps illustrated in <a href="https://github.com/cobbr/Covenant/wiki/Installation-And-Startup" style="font-weight: bold;" target="_blank">Covenant C2's official documentation.</a><br>
             
             > Starting from your Kali machine, you can clone and cd into your new Covenant package.<br>
@@ -110,7 +109,7 @@
             > You should now see that your Covenant dashboard has been activated and at https://{local_ip}:7443.<br>            
             > This concludes the online installation and you are ready to explore the dashboard in Section 2!<br><br>
 
-            <strong>Section 1.b: Offline Kali Installation</strong><br>
+            <strong>Section 2.b: Offline Kali Installation</strong><br>
             > On an online Windows/Mac/Linux machine, run the following commands and save to a zipped folder<br>
             > Once you copy you zipped file over to your Kali machine, extract and CD into your Covenant folder. <br>
             > If you try to 'dotnet build' your project you'll encounter this error. <br><br>
@@ -130,14 +129,15 @@
 
             > ...This concludes the offline installation and you are ready to start your first listener in Section 2!<br><br>
         
-            <strong>Section 2:Covenant Dashboard Basics</strong><br>
+            <strong>Section 3:Covenant Dashboard Basics</strong><br>
             > So once you verify that Covenant is running, let's talk about the dashboard.<br>
             > The dashboard is divided into three main sections: Grunts, Listeners, and Tasks.<br>
             > Grunts are the agents controlled by the Covenant framework, designed to execute tasks and payloads on compromised hosts, reporting back to the Covenant server. <br>
             > Listeners are the endpoints that Grunts connect to. Listeners are responsible for receiving Grunt connections, authenticating them, and relaying commands and responses between the Grunt and the Covenant server. <br>
             > Tasks are the actions that Grunts can perform. Tasks are executed on Grunts and can be used to perform actions on the host, such as executing a shell command, uploading a file, or executing a Covenant script. <br>
 
-            <strong>Setting Up Your First Listener</strong><br>
+            <br>
+            <strong>Section 4: Setting Up Your First Listener</strong><br>
           </p>
         </article>
       </section>
