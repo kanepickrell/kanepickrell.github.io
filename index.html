@@ -1,97 +1,167 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Home</title>
-    <meta charset="utf-8" />
-    <meta
-      name="keywords"
-      content="engineer, cyber automation, machine learning, malware analysis, software development, capabilitiy development"
-    />
-    <meta name="robots" content="index, follow" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="revisit-after" content="1 days" />
-    <meta name="author" content="Kane Pickrel" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="shortcut icon" href="assets/css/images/icon.ico" />
-  </head>
-
-  <body class="Loading">
-    <div id="wrapper">
-      <div id="bg"></div>
-      <div id="overlay"></div>
-      <div id="main">
-        <!-- Header -->
-        <header id="header">
-          <h1>Kane Pickrel</h1>
-          <p>Software Engineer &nbsp;&bull;&nbsp; Cyber Automation</p>
-          <nav>
-            <ul>
-              <li>
-                <a
-                  href="post.html"
-                  id="posts-link"
-                  class="icon fa-lightbulb-o"
-                  target="_self"
-                  ><span class="label">Posts</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/kane-pickrel-9288a691/"
-                  class="icon fa-linkedin"
-                  target="_blank"
-                  ><span class="label">Linkedin</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/kanepickrell"
-                  class="icon fa-github"
-                  target="_blank"
-                  ><span class="label">Github</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="mailto:kanepickrell@gmail.com"
-                  class="icon fa-envelope-o"
-                  target="_blank"
-                  ><span class="label">Email</span></a
-                >
-              </li>
-            </ul>
-          </nav>
-        </header>
-
-        <!-- Footer -->
-      </div>
-    </div>
-    <!--[if lte IE 8
-      ]><script src="assets/js/ie/respond.min.js"></script
-    ><![endif]-->
-    <script>
-      window.onload = function () {
-        // Existing code
-        document.body.className = "";
-
-        // New code to move buttons for the posts page
-        if (window.location.href.includes("posts.html")) {
-          var buttons = document.querySelectorAll("#header nav a");
-          buttons.forEach(function (button) {
-            button.classList.add("move-to-bottom");
-          });
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kane Pickrel">
+    <meta name="description" content="Kane Pickrel - Software Engineer, Cyber Automation">
+    <title>Kane Pickrel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        // More of your existing code
-        window.ontouchmove = function () {
-          return false;
-        };
-        window.onorientationchange = function () {
-          document.body.scrollTop = 0;
-        };
-      };
-    </script>
-  </body>
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fff;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #222;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        nav a:hover {
+            border-bottom: 1px solid #222;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: -0.3px;
+        }
+
+        .work-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 2px solid #eee;
+        }
+
+        .work-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .work-item .meta {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .work-item p {
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .work-item a {
+            color: #222;
+            text-decoration: underline;
+            font-size: 0.95rem;
+        }
+
+        .work-item a:hover {
+            color: #666;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kane Pickrel</h1>
+        <p class="subtitle">Software Engineer · Cyber Automation</p>
+        <nav>
+            <a href="https://www.linkedin.com/in/kane-pickrel-9288a691/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/kanepickrell" target="_blank">GitHub</a>
+            <a href="mailto:kanepickrell@gmail.com">Email</a>
+        </nav>
+    </header>
+
+    <section id="writing">
+        <h2>Writing</h2>
+        
+        <div class="work-item">
+            <h3>A Case for the Eucharist</h3>
+            <p class="meta">Book · In Progress</p>
+            <p>An exploration of Eucharistic theology, historical evidence, and the scriptural foundation for the Real Presence.</p>
+            <a href="eucharist.html">Read more →</a>
+        </div>
+
+        <div class="work-item">
+            <h3>Learning Covenant C2 - Setup Guide & Lessons Learned</h3>
+            <p class="meta">45 minute read · Published December 22, 2023</p>
+            <p>A comprehensive guide to setting up Covenant C2 and establishing your first listener, including both online and offline installation methods for Kali Linux.</p>
+            <a href="post1.html">Read more →</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Kane Pickrel</p>
+    </footer>
+</body>
 </html>

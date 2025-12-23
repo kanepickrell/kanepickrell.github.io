@@ -1,95 +1,224 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Posts</title>
-    <meta charset="utf-8" />
-    <meta name="robots" content="index, follow" />
-    <meta name="revisit-after" content="1 days" />
-    <meta name="author" content="Kane Pickrel" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/post.css" />
-    <link rel="shortcut icon" href="assets/css/images/icon.ico" />
-    <!-- Add FontAwesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav id="navbar">
-      <ul>
-        <li>
-          <a
-            href="index.html"
-            id="home-link"
-            class="icon fa-home"
-            target="_self"
-            ><span class="label">Home</span></a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/kane-pickrel-9288a691/"
-            class="icon fa-linkedin"
-            target="_blank"
-            ><span class="label">Linkedin</span></a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/kanepickrell"
-            class="icon fa-github"
-            target="_blank"
-            ><span class="label">Github</span></a
-          >
-        </li>
-        <li>
-          <a
-            href="mailto:kanepickrell@gmail.com"
-            class="icon fa-envelope-o"
-            target="_blank"
-            ><span class="label">Email</span></a
-          >
-        </li>
-      </ul>
-    </nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kane Pickrel">
+    <title>Learning Covenant C2 - Kane Pickrel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Post Section -->
-    <section id="post-section">
-      <article>
-        <!-- Your post content goes here -->
-        <h2>Posts</h2>
-        <p>=======</p>
-        <a href="post1.html"
-          ><h3>Learning Covenant C2 - Setup Guide & Lessons learned</h3>
-        </a>
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fff;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-        <p style="color: gray; font-size: larger; margin-top: -10px">
-          45 minute read - Published: 22 Dec, 2023
-        </p>
+        header {
+            margin-bottom: 60px;
+        }
 
-        <p>
-          > This post is how to spin up Covenant C2 and set up your first
-          listenter in under an hour.<br />
-          > Ill provide notes on how to do this offline as well to help you
-          install the dependencies without internet access.<br />
-          > As I am still pretty novice to red teaming, I think my perspective
-          be helpful to others who are just starting out as well.<br /><br />
-        </p>
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
 
-        <!-- <a href="post2.html"
-            ><h3>Red Teaming 101: Learning Covenant C2 Framework</h3></a
-          >
-          <p>
-          </p> -->
+        .back-link:hover {
+            color: #222;
+        }
 
-        <!-- <a href="post3.html"
-            ><h3>Red Teaming 102: Learning Covenant C2 Framework</h3></a
-          >
-          <p>
-          </p> -->
-      </article>
-    </section>
-  </body>
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            letter-spacing: -0.3px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        em {
+            font-style: italic;
+            color: #666;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #222;
+        }
+
+        pre {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 3px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: #222;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+        }
+
+        blockquote {
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 3px solid #ddd;
+            color: #666;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            pre {
+                padding: 15px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">← Back to home</a>
+        <h1>Learning Covenant C2</h1>
+        <p class="meta">Setup Guide & Lessons Learned · 45 minute read · Published December 22, 2023</p>
+    </header>
+
+    <article>
+        <h2>Section 0: Introduction</h2>
+        <p>In this guide, I'll show you how to set up Covenant C2 and establish your first listener in under an hour.</p>
+        <p>Why am I writing this? My initial experience with configuring .NET and installing dependencies offline turned out to be more time-consuming than necessary. That being said, my mission is to spare you this hassle and provide a no-nonsense, straightforward tutorial to streamline your setup process.</p>
+        <p>As my focus will be to show you what to look out for when installing offline, I'll also walk through setting up on a Kali machine with internet access.</p>
+        <p>As a final note, I'll admit I am still new to red teaming, so I've designed this guide for those who are also absolute beginners and new to command and control (C2) tools.</p>
+
+        <h2>Section 1: Technology Overview</h2>
+        <p><em>Description:</em> Covenant C2 is a command and control (C2) post-exploitation framework. As of mid-September 2019, Covenant is considered one of the latest and advanced frameworks in this area.</p>
+        <p><em>Prerequisites:</em> Compatible with Windows 10 workstations, recent Windows Server OS, or Linux distributions supporting .NET Core. Required applications: GIT and .NET Core 2.2 SDK.</p>
+        <p><em>Installation Process:</em> Covenant uses a modern, cross-platform architecture and does not come with a traditional installer. Installation involves cloning the project git repository and building and running the application.</p>
+
+        <h2>Section 2.a: Online Installation</h2>
+        <p>Below are the steps illustrated in <a href="https://github.com/cobbr/Covenant/wiki/Installation-And-Startup" target="_blank">Covenant C2's official documentation</a>.</p>
+        <p>Starting from your Kali machine, you can clone and cd into your new Covenant package.</p>
+
+<pre><code>git clone --recurse-submodules https://github.com/cobbr/Covenant
+cd Covenant/Covenant</code></pre>
+
+        <p>Before you build the Covenant project, you'll run as root user and update the dotnet system global variant.</p>
+        <p>If you don't add this rule to the zsh script, you'll receive a "Couldn't find a valid ICU package installed on the system".</p>
+        <p>This typically occurs in Dotnet Core projects or packaged Dotnet Core binaries running on Ubuntu due to a missing dependency for Unicode and Globalization support.</p>
+
+<pre><code>sudo su
+vim ~/.zshrc</code></pre>
+
+        <img src="assets/css/images/dotnet_rule.jpeg" alt="Dotnet configuration">
+
+<pre><code>dotnet build
+dotnet run</code></pre>
+
+        <p>You should now see that your Covenant dashboard has been activated and at https://{local_ip}:7443.</p>
+        <p>This concludes the online installation and you are ready to explore the dashboard in Section 3!</p>
+
+        <h2>Section 2.b: Offline Kali Installation</h2>
+        <p>On an online Windows/Mac/Linux machine, run the following commands and save to a zipped folder.</p>
+        <p>Once you copy your zipped file over to your Kali machine, extract and CD into your Covenant folder.</p>
+        <p>If you try to 'dotnet build' your project you'll encounter this error:</p>
+
+        <img src="assets/css/images/nuget_err.jpeg" alt="NuGet error">
+
+        <p>This is where I had trouble with dependencies. .NET is trying to reach out to the internet and download its required Nuget dependencies.</p>
+        <p>The dependencies you will need can be downloaded here.</p>
+        <p>Once you download these to your online Windows/Mac/Linux, copy them over to Linux and upload them here.</p>
+        <p>In covenant, you'll now make two configurations to the nuget.config file.</p>
+
+<pre><code>dotnet build
+dotnet run</code></pre>
+
+        <p>This concludes the offline installation and you are ready to start your first listener in Section 3!</p>
+
+        <h2>Section 3: Covenant Dashboard Basics</h2>
+        <p>So once you verify that Covenant is running, let's talk about the dashboard.</p>
+        <p>The dashboard is divided into three main sections: Grunts, Listeners, and Tasks.</p>
+        <p><strong>Grunts</strong> are the agents controlled by the Covenant framework, designed to execute tasks and payloads on compromised hosts, reporting back to the Covenant server.</p>
+        <p><strong>Listeners</strong> are the endpoints that Grunts connect to. Listeners are responsible for receiving Grunt connections, authenticating them, and relaying commands and responses between the Grunt and the Covenant server.</p>
+        <p><strong>Tasks</strong> are the actions that Grunts can perform. Tasks are executed on Grunts and can be used to perform actions on the host, such as executing a shell command, uploading a file, or executing a Covenant script.</p>
+
+        <h2>Section 4: Setting Up Your First Listener</h2>
+        <p><em>Content to be added</em></p>
+    </article>
+
+    <footer>
+        <p>© 2025 Kane Pickrel</p>
+    </footer>
+</body>
 </html>
